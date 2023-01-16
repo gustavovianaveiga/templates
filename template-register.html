@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <form action="" method="post">
+        <div id="fundo">
+            <div id="loginbox">
+                <div id='align' class="flex flex-col justify-between items-center">
+                    <div>
+                        <img src="https://wpblog.zyro.com/cdn-cgi/image/w=700,q=85/wp-content/uploads/2021/03/Apple-logo.png" alt="logo" id="logo">
+                    </div>
+                    <div id="logininputs" class="flex flex-col justify-between justify-center items-center">
+                        <div class="flex flex-col justify-between" style="height: 120px;">
+                            <input type="text" name="email" id="email" required>
+                            <label for="email" id="emaillabel">E-mail</label>
+                            <input type="password" name="senha" id="senha" required>
+                            <label for="senha" id="senhalabel">Senha</label>
+                        </div>
+                    </div>
+                    <button type="submit">Registrar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <style>
+        #email:hover~#emaillabel,
+        #senha:hover~#senhalabel,
+        #senha:valid~#senhalabel,
+        #email:valid~#emaillabel {
+            top: -47px
+        }
+        
+        #logo {
+            width: 100px;
+            margin-bottom: 50px;
+        }
+        
+        button {
+            width: 90px;
+            height: 25px;
+            border: 1px solid var(--text-color);
+            color: var(--text-color);
+            background: transparent;
+            border-radius: 14px;
+            transition: all .1s;
+        }
+        
+        button:hover {
+            background: rgba(255, 255, 255, 0.082);
+        }
+        
+        label {
+            transition: all .05s;
+            width: 37px;
+            color: var(--text-color);
+            position: relative;
+            top: -32px;
+            background: var(--primary-color);
+            left: 20px;
+            user-select: none;
+        }
+        
+        input:focus-visible {
+            outline: none;
+        }
+        
+        input {
+            padding: 13px!important;
+            width: 330px;
+            height: 30px;
+            border: 1px solid var(--text-color);
+            color: var(--text-color);
+            background: transparent;
+            border-radius: 14px;
+        }
+        
+        #loginbox {
+            background: var(--primary-color);
+            width: 450px;
+            height: 600px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        html,
+        body,
+        #fundo {
+            align-items: center;
+            justify-content: center;
+            background-color: var(--main-color);
+            --contrast-color: #1a1a1a;
+            --primary-color: black;
+            --secound-clor: white;
+            --text-color: #dedede;
+            --main-color: #F2EFE9;
+            --invertporcent: 80%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        * {
+            font-size: .9rem;
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</body>
+
+</html>

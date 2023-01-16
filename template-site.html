@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div id="barside">
+
+        <div id="barinside">
+            <div class="flex flex-col justify-center" id="logoandnav">
+                <div class="flex flex-col justify-between" id='logoandnavalign'>
+                    <div>
+                        <img src="https://wpblog.zyro.com/cdn-cgi/image/w=700,q=85/wp-content/uploads/2021/03/Apple-logo.png" alt="logoheader" id="logobarside">
+                    </div>
+                    <nav>
+                        <div>
+                            <a href="">Home</a>
+                        </div>
+                        <div>
+                            <a href="">Ajuda</a>
+                        </div>
+                        <div>
+                            <a href="">Sobre</a>
+                        </div>
+                        <div>
+                            <a href="">Sair</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div id="xbutton">
+                <img src="https://cdn.icon-icons.com/icons2/933/PNG/512/close-button_icon-icons.com_72803.png" alt="fechar" style="cursor: pointer;">
+            </div>
+        </div>
+    </div>
+    <div>
+        <header>
+
+            <div id="header" class="flex justify-between items-center">
+                <div id="openbarside">
+                    <img src="https://static.thenounproject.com/png/696519-200.png" alt="openbarside">
+                </div>
+                <div>
+                    <img src="https://wpblog.zyro.com/cdn-cgi/image/w=700,q=85/wp-content/uploads/2021/03/Apple-logo.png" alt="logoheader" id="logoheader">
+                </div>
+                <div>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2767/2767155.png" alt="logout" id="logout">
+                </div>
+            </div>
+
+        </header>
+        <main>
+            <div id="main"></div>
+        </main>
+    </div>
+    <footer>
+        <div id="footer"></div>
+    </footer>
+
+
+    <style>
+        html,
+        body {
+            justify-content: space-between;
+            background-color: var(--main-color);
+            --contrast-color: #1a1a1a;
+            --primary-color: black;
+            --secound-clor: white;
+            --text-color: #dedede;
+            --main-color: #F2EFE9;
+            --invertporcent: 80%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #header {
+            height: 80px;
+            background-color: var(--primary-color);
+        }
+        
+        #logoheader,
+        #logobarside {
+            width: 40px;
+        }
+        
+        #footer {
+            height: 120px;
+            background-color: var(--primary-color);
+        }
+        
+        #main {
+            height: 200px;
+            border: 1px solid red;
+        }
+        
+        #barside {
+            z-index: 999;
+            width: 200px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--primary-color);
+            position: fixed;
+            color: var(--text-color);
+            margin-left: -1000px;
+            transition: all .4s;
+        }
+        
+        #barinside {
+            display: flex;
+            justify-content: space-between;
+            height: 90%;
+            width: inherit;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        #logoandnav {
+            height: 320px
+        }
+        
+        #logoandnavalign {
+            height: 300px;
+        }
+        
+        @media (max-width:800px) {
+            #barside {
+                width: 100%;
+                height: 100%;
+            }
+            #logoandnav {
+                height: 100%;
+            }
+            #logoandnavalign {
+                height: 180px
+            }
+        }
+        
+        #xbutton {
+            width: 17px;
+            filter: invert(var(--invertporcent));
+        }
+        
+        #openbarside {
+            cursor: pointer;
+            width: 50px;
+            filter: invert(var(--invertporcent));
+            margin-left: 20px;
+        }
+        
+        #logout {
+            width: 30px;
+            filter: invert(var(--invertporcent));
+            cursor: pointer;
+            margin-right: 20px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $("#xbutton").click(function() {
+            $("#barside").css("marginLeft", "-1000px");
+        });
+        $("#openbarside").click(function() {
+            $("#barside").css("marginLeft", "0px");
+        });
+    </script>
+
+</body>
+
+</html>
